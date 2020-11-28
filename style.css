@@ -1,0 +1,225 @@
+/* for headings */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* font-family: 'Abril Fatface', cursive; */
+
+
+/* for plane text */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap');
+/* font-family: 'Balsamiq Sans', cursive; */
+
+
+/* Common styling for all the components */
+html{
+    scroll-behavior: smooth;
+}
+
+a:active{
+    color: rgb(130,71,162);
+}
+
+body{
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+h1, h3{
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 1.5px;
+    margin-top: 25px;
+    line-height: 30px;
+}
+
+iframe{
+    height: 350px;
+    width: 561px;
+    margin-top: 20px;
+}
+
+span{
+    color: rgb(255,0,45);
+    font-weight: 1200;
+}
+
+
+.container{
+    padding: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 10px #b6b6b6;
+    background-color: #f0f0f0;
+    line-height: 23px;
+    word-spacing: 3px;
+    padding-bottom: 20px;
+}
+
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar .links{
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    margin-top: 10px;
+}
+
+.navbar .links div{
+    margin: 5px;
+    text-decoration: none;
+    font-size: large;
+}
+
+#howToUse{
+    margin: 0 auto;
+}
+
+#introduction p{
+    text-align: unset;
+}
+
+/* for navbar buttons */
+
+.links{
+    text-align: center;
+    margin-top: 25%;
+}
+
+
+.btn{
+    /* border:  1px solid #3498db; */
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    color: rgb(52,152,219);
+    transform-origin: center;
+}
+
+button{
+    outline: none;
+    border: none;
+}
+
+.btn:active{
+    color: #6b6b6b;
+}
+
+.btn:hover{
+    animation: navLinks 1s ease-in-out infinite;
+}
+
+@keyframes navLinks{
+    0%{
+        transform: rotate(5deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    100%{
+        transform: rotate(5deg);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for footer */
+.footer{
+    color: #000000;
+    /* width: 100%; */
+    position: relative;
+    bottom: 0;
+    padding: 5px;
+    text-align: center;
+    background: rgb(219,224,234);
+    border-top: 2px solid rgba(224,60,59, 0.5);
+    border-radius: 5px 5px 0 0;
+    transition-duration: 1s;
+    opacity: 0.8;
+    animation: Border 2s ease-in-out infinite;
+    margin-top: 10px;
+}
+
+.footer-link{
+    width: 80%;
+    margin: 10px auto;
+    height: 40px;
+}
+
+.footer-link a{
+    margin: 10px;
+    text-decoration: none;
+    transition-duration: 1s;
+    position: relative;
+}
+
+.footer-link a:hover{
+    top: 3px;
+}
+
+@keyframes Border{
+
+    20%,80%{
+        border-color: rgba(255, 4, 4, 1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for mobile */
+@media only screen and (max-width: 786px) {
+    .navbar .links{
+        flex-direction: column;
+    }
+
+    iframe{
+        height: 140px;
+        width: 280px;
+        margin-top: 20px;
+    }
+
+    .btn{
+        border: none;
+    }
+
+    .btn:hover{
+        animation: none;
+    }
+
+    .btn:active{
+        color: #6b6b6b;
+        position: relative;
+        top: 2px;
+    }
+}
