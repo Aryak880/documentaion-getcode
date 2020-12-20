@@ -7,6 +7,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap');
 /* font-family: 'Balsamiq Sans', cursive; */
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+
+
 
 /* Common styling for all the components */
 html{
@@ -18,7 +21,10 @@ a:active{
 }
 
 body{
-    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f1fde5;
 }
 
 h1, h3{
@@ -39,40 +45,45 @@ span{
     font-weight: 1200;
 }
 
+#howToUse ul{
+    list-style: none;
+}
 
 .container{
     padding: 0 10px;
     border-radius: 5px;
-    box-shadow: 0 0 10px 10px #b6b6b6;
+/*    box-shadow: 0 0 10px 10px #b6b6b6;*/
     background-color: #f0f0f0;
     line-height: 23px;
     word-spacing: 3px;
     padding-bottom: 20px;
 }
 
-
 .navbar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    text-align: center;
+    margin: 20px;
+    margin-top: 0;
 }
 
 .navbar .links{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
     display: flex;
-    align-items: center;
-    align-content: space-around;
-    margin-top: 10px;
+    flex-direction: column;
 }
 
-.navbar .links div{
-    margin: 5px;
-    text-decoration: none;
-    font-size: large;
+.navbar .logo img{
+    height: 150px;
+    margin: 10px 0;
 }
+
 
 #howToUse{
-    margin: 0 auto;
+    margin: 20px auto;
+    text-align: center;
 }
 
 #introduction p{
@@ -81,55 +92,25 @@ span{
 
 /* for navbar buttons */
 
-.links{
-    text-align: center;
-    margin-top: 25%;
-}
-
-
-.btn{
-    /* border:  1px solid #3498db; */
-    background: none;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-family: "montserrat";
-    cursor: pointer;
-    margin: 10px;
-    transition: 0.5s;
-    position: relative;
-    overflow: hidden;
-    color: rgb(52,152,219);
-    transform-origin: center;
-}
-
-button{
-    outline: none;
-    border: none;
-}
-
 .btn:active{
     color: #6b6b6b;
 }
 
-.btn:hover{
-    animation: navLinks 1s ease-in-out infinite;
+.links a{
+    text-decoration: none;
+    margin: 10px;
+    transition: 0.5s;
+    padding: 4px;
+/*    border: 1px dotted blue;*/
+    border-radius: 10px;
+/*    width: 20%;*/
 }
 
-@keyframes navLinks{
-    0%{
-        transform: rotate(5deg);
-    }
-    50%{
-        transform: rotate(-5deg);
-    }
-    100%{
-        transform: rotate(5deg);
-    }
-    
+.links a:hover{
+    color: black;
+    text-shadow: 1px 3px 3px red;
+    border-radius: 5px;
 }
-
-
-
 
 
 
@@ -183,43 +164,16 @@ button{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* for mobile */
-@media only screen and (max-width: 786px) {
-    .navbar .links{
-        flex-direction: column;
-    }
-
+@media only screen and (max-width: 768px) {
+    
+    a{
+        font-size: 18px;
+    }    
+    
     iframe{
-        height: 140px;
-        width: 280px;
+        height: 160px;
+        width: 320px;
         margin-top: 20px;
-    }
-
-    .btn{
-        border: none;
-    }
-
-    .btn:hover{
-        animation: none;
-    }
-
-    .btn:active{
-        color: #6b6b6b;
-        position: relative;
-        top: 2px;
     }
 }
